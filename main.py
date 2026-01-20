@@ -1,3 +1,4 @@
+# this imports all the necessary functions from the separate modules in the project.
 from schema import create_tables
 from seed import seed_data
 from repository import (
@@ -15,6 +16,7 @@ from repository import (
     
 )
 
+# The main function is what drives the program. It supplies the menu of functionality and calls the basic logic depending on the users choices.
 def main():
     print("Initializing database...")
     create_tables()
@@ -38,6 +40,7 @@ def main():
 
         choice = input("Choose an option (1–4): ").strip()
 
+        # Once the users choice is made this series of else if statements run the correct functions based of the requested operations.
         if choice == "1":
             show_leaderboard()
         elif choice == "2":

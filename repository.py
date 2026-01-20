@@ -24,7 +24,7 @@ def get_player_id_by_name(player_name):
     cursor = conn.cursor()
 
     cursor.execute(
-        "SELECT player_id FROM players WHERE player_name = ?;",
+        "SELECT player_id FROM players WHERE player_name ?;",
         (player_name,)
     )
 
